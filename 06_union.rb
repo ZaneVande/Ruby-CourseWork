@@ -1,10 +1,8 @@
 # Write a method, union, that accepts any number of arrays as arguments.
 # The method should return an array containing all elements of the given arrays.
 
-def union(arr, arr_2, *other_arr)
-
-    new_arr = [*arr, *arr_2, *other_arr] #still need to figure out how to unpack this last array
-
+def union(*arrays)
+    arrays.inject { |acc, array| acc + array }
 end
 
 p union(["a", "b"], [1, 2, 3]) # => ["a", "b", 1, 2, 3]
