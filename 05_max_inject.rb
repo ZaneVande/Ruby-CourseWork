@@ -1,9 +1,15 @@
 # Write a method, max_inject(arr), that accepts any amount of numbers arguments and returns
 # the largest number. Solve this using the built-in inject.
 
-def max_inject(arr)
+def max_inject(*arr)
 
-    arr.inject { |acc, el| acc + el } #something isn't right, error: wrong number of arguments (given 5, expected 1..)
+    arr.inject do |acc, el|
+        if el > acc
+            el 
+        else 
+            acc
+        end
+    end
 
 end
 
