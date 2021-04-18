@@ -3,6 +3,8 @@
 
 def grid(n, m)
 
+    grid = Array.new(n) { Array.new(m) }
+
 end
 
 result_1 = grid(2, 3)
